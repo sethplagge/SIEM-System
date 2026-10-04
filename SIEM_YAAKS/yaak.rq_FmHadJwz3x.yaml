@@ -2,9 +2,9 @@ type: http_request
 model: http_request
 id: rq_FmHadJwz3x
 createdAt: 2026-10-04T09:18:11.762353800
-updatedAt: 2026-10-04T11:34:35.647098200
+updatedAt: 2026-10-04T12:25:20.310804200
 workspaceId: wk_BAjMfDGzCZ
-folderId: fl_a9oQpRcDao
+folderId: fl_9EpykVyDwe
 authentication: {}
 authenticationType: null
 body:
@@ -23,7 +23,7 @@ headers:
   id: 5RPVjX6Zi9
 method: POST
 name: Add new event
-sortPriority: 0.0
+sortPriority: 1000.0
 url: http://localhost:8080/event
 urlParameters: []
 settingSendCookies:

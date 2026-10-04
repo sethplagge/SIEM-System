@@ -44,9 +44,9 @@ public class SecurityEventController {
         return "Event does not exist";
     }
 
-    @PutMapping("/event/{eventID}")
-    public String restoreEvent(@PathVariable int eventID) {
-        SecurityEvent event = event(eventID);
+    @PutMapping("/event/{id}")
+    public String restoreEvent(@PathVariable int id) {
+        SecurityEvent event = event(id);
         if(event!=null && event.isDeleted()) {
             event.setDeleted(false);
             securityEventRepository.save(event);

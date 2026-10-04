@@ -27,12 +27,11 @@ public class Alert {
         timestamp = LocalDateTime.now();
     }
 
-    public Alert(String eventType, String severity, String notes, String ipAddress, LocalDateTime timestamp, boolean resolved) {
+    public Alert(String eventType, String severity, String notes, String ipAddress, boolean resolved) {
         this.eventType = eventType;
         this.severity = severity;
         this.notes = notes;
         this.ipAddress = ipAddress;
-        this.timestamp = timestamp;
         this.resolved = resolved;
     }
 

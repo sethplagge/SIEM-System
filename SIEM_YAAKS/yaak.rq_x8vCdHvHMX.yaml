@@ -1,20 +1,20 @@
 type: http_request
 model: http_request
-id: rq_KTBC8j4vpr
-createdAt: 2026-10-04T10:54:18.326077300
-updatedAt: 2026-10-04T12:25:20.310891800
+id: rq_x8vCdHvHMX
+createdAt: 2026-10-04T12:24:37.788009500
+updatedAt: 2026-10-04T12:25:53.603781400
 workspaceId: wk_BAjMfDGzCZ
-folderId: fl_9EpykVyDwe
+folderId: fl_HrWYAtAYKH
 authentication: {}
 authenticationType: null
 body: {}
 bodyType: null
 description: ''
 headers: []
-method: PUT
-name: Restore an event
-sortPriority: 3000.0
-url: http://localhost:8080/event/8
+method: DELETE
+name: Hard delete all alerts
+sortPriority: 0.0
+url: http://localhost:8080/alert
 urlParameters: []
 settingSendCookies:
   enabled: false

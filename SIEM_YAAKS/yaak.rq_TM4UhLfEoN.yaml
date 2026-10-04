@@ -2,9 +2,9 @@ type: http_request
 model: http_request
 id: rq_TM4UhLfEoN
 createdAt: 2026-10-04T09:29:11.848406300
-updatedAt: 2026-10-04T10:10:15.111421
+updatedAt: 2026-10-04T12:25:20.310785800
 workspaceId: wk_BAjMfDGzCZ
-folderId: fl_a9oQpRcDao
+folderId: fl_9EpykVyDwe
 authentication: {}
 authenticationType: null
 body: {}
@@ -13,7 +13,7 @@ description: ''
 headers: []
 method: GET
 name: '"See" all events'
-sortPriority: 1000.0
+sortPriority: 0.0
 url: http://localhost:8080/event
 urlParameters: []
 settingSendCookies:

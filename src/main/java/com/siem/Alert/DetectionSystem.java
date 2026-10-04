@@ -21,12 +21,7 @@ public class DetectionSystem {
         LocalDateTime end = LocalDateTime.now();
         LocalDateTime start = end.minusMinutes(5);
 
-        List<SecurityEvent> bruteForceEvents = securityEventRepository.findByEventTypeAndIpAddressAndTimestampBetween(
-                "LOGIN-FAILED",
-                event.getIpAddress(),
-                start,
-                end
-        );
+        List<SecurityEvent> bruteForceEvents = securityEventRepository.findByEventTypeAndIpAddressAndTimestampBetween("LOGIN-FAILED", event.getIpAddress(), start, end);
 
         if (bruteForceEvents.size() >= 3) {
             Alert bruteForce = new Alert(
@@ -34,7 +29,6 @@ public class DetectionSystem {
                     "medium",
                     "",
                     event.getIpAddress(),
-                    LocalDateTime.now(),
                     false
             );
             alertRepository.save(bruteForce);
