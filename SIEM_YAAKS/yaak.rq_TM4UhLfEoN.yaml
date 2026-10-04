@@ -1,0 +1,36 @@
+type: http_request
+model: http_request
+id: rq_TM4UhLfEoN
+createdAt: 2026-10-04T09:29:11.848406300
+updatedAt: 2026-10-04T09:29:17.633740200
+workspaceId: wk_BAjMfDGzCZ
+folderId: null
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: ''
+headers: []
+method: GET
+name: ''
+sortPriority: -1791105491760.0
+url: http://localhost:8080/event
+urlParameters: []
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0
+settingHttpVersion:
+  enabled: false
+  value: auto

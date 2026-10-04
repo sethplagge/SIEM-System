@@ -19,4 +19,10 @@ public class SecurityEvent {
     private String sourceIp;
     private String message;
     private LocalDateTime timestamp;
+
+    @PrePersist
+    private void setTime(){
+        timestamp = LocalDateTime.now();
+    }
+
 }

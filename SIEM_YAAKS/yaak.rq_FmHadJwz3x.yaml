@@ -1,0 +1,47 @@
+type: http_request
+model: http_request
+id: rq_FmHadJwz3x
+createdAt: 2026-10-04T09:18:11.762353800
+updatedAt: 2026-10-04T09:28:48.216810800
+workspaceId: wk_BAjMfDGzCZ
+folderId: null
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "eventType" : "LOGIN-ATTEMPT",
+      "username" : "Hacker123",
+      "sourceIp" : "192.168.1.1",
+      "message" : "Failed login attempt",
+    }
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: 5RPVjX6Zi9
+method: POST
+name: ''
+sortPriority: -1791105491760.0
+url: http://localhost:8080/event
+urlParameters: []
+settingSendCookies:
+  enabled: false
+  value: true
+settingStoreCookies:
+  enabled: false
+  value: true
+settingValidateCertificates:
+  enabled: false
+  value: true
+settingFollowRedirects:
+  enabled: false
+  value: true
+settingRequestTimeout:
+  enabled: false
+  value: 0
+settingHttpVersion:
+  enabled: false
+  value: auto
