@@ -1,21 +1,16 @@
-type: http_request
-model: http_request
-id: rq_TM4UhLfEoN
-createdAt: 2026-10-04T09:29:11.848406300
-updatedAt: 2026-10-04T10:10:15.111421
+type: folder
+model: folder
+id: fl_a9oQpRcDao
+createdAt: 2026-10-04T10:10:09.288390600
+updatedAt: 2026-10-04T10:10:09.288390900
 workspaceId: wk_BAjMfDGzCZ
-folderId: fl_a9oQpRcDao
+folderId: null
 authentication: {}
 authenticationType: null
-body: {}
-bodyType: null
 description: ''
 headers: []
-method: GET
-name: '"See" all events'
-sortPriority: 1000.0
-url: http://localhost:8080/event
-urlParameters: []
+name: Application
+sortPriority: -1791108609286.0
 settingSendCookies:
   enabled: false
   value: true
@@ -31,6 +26,9 @@ settingFollowRedirects:
 settingRequestTimeout:
   enabled: false
   value: 0
+settingRequestMessageSize:
+  enabled: false
+  value: 67108864
 settingHttpVersion:
   enabled: false
   value: auto

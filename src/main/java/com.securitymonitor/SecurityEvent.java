@@ -16,9 +16,10 @@ public class SecurityEvent {
 
     private String eventType;
     private String username;
-    private String sourceIp;
+    private String ipAddress;
     private String message;
     private LocalDateTime timestamp;
+    private boolean deleted;
 
     @PrePersist
     private void setTime(){

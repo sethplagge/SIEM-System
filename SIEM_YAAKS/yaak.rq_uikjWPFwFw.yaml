@@ -1,8 +1,8 @@
 type: http_request
 model: http_request
-id: rq_TM4UhLfEoN
-createdAt: 2026-10-04T09:29:11.848406300
-updatedAt: 2026-10-04T10:10:15.111421
+id: rq_uikjWPFwFw
+createdAt: 2026-10-04T09:58:00.857663800
+updatedAt: 2026-10-04T10:10:15.111456
 workspaceId: wk_BAjMfDGzCZ
 folderId: fl_a9oQpRcDao
 authentication: {}
@@ -11,10 +11,10 @@ body: {}
 bodyType: null
 description: ''
 headers: []
-method: GET
-name: '"See" all events'
-sortPriority: 1000.0
-url: http://localhost:8080/event
+method: DELETE
+name: Soft delete an event
+sortPriority: 2000.0
+url: http://localhost:8080/event/4
 urlParameters: []
 settingSendCookies:
   enabled: false
