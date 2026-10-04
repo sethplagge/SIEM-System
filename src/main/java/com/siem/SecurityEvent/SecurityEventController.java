@@ -1,4 +1,5 @@
-package com.securitymonitor;
+package com.siem.SecurityEvent;
+import com.siem.Alert.*;
 
 import org.springframework.web.bind.annotation.*;
 import jakarta.servlet.http.HttpServletRequest;
@@ -8,9 +9,12 @@ import java.util.List;
 public class SecurityEventController {
 
     private final SecurityEventRepository securityEventRepository;
+    private final DetectionSystem detectionSystem;
 
-    public SecurityEventController(SecurityEventRepository securityEventRepository) {
+
+    public SecurityEventController(SecurityEventRepository securityEventRepository, DetectionSystem detectionSystem) {
         this.securityEventRepository = securityEventRepository;
+        this.detectionSystem = detectionSystem;
     }
 
     public SecurityEvent event(int id) {
@@ -24,8 +28,9 @@ public class SecurityEventController {
 
     @PostMapping("/event")
     public void createEvent(@RequestBody SecurityEvent securityEvent, HttpServletRequest ip) {
-            securityEvent.setIpAddress(ip.getRemoteAddr());
-            securityEventRepository.save(securityEvent);
+        securityEvent.setIpAddress(ip.getRemoteAddr());
+        securityEventRepository.save(securityEvent);
+        detectionSystem.bruteForceAttack(securityEvent);
     }
 
     @DeleteMapping("/event/{eventID}")

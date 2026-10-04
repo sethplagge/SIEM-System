@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_FmHadJwz3x
 createdAt: 2026-10-04T09:18:11.762353800
-updatedAt: 2026-10-04T10:21:42.658832100
+updatedAt: 2026-10-04T11:34:35.647098200
 workspaceId: wk_BAjMfDGzCZ
 folderId: fl_a9oQpRcDao
 authentication: {}
@@ -10,7 +10,7 @@ authenticationType: null
 body:
   text: |-
     {
-      "eventType" : "LOGIN-ATTEMPT",
+      "eventType" : "LOGIN-FAILED",
       "username" : "Hacker123",
       "message" : "Failed login attempt",
     }

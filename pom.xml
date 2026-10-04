@@ -4,8 +4,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.securitymonitor</groupId>
-  <artifactId>securitymonitor</artifactId>
+  <groupId>com.siem</groupId>
+  <artifactId>securitySystem</artifactId>
   <version>1.0.0</version>
 
 
@@ -16,7 +16,7 @@
     <version>3.4.3</version>
   </parent>
 
-  <name>securitymonitor</name>
+  <name>securitySystem</name>
 
   <properties>
 

@@ -1,4 +1,4 @@
-package com.securitymonitor;
+package com.siem.SecurityEvent;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
