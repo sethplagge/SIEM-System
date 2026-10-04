@@ -47,6 +47,9 @@ public class SecurityEventController {
             securityEventRepository.save(event);
             return "Event has been restored";
         }
+        else if (event != null) {
+            return "Event is not deleted";
+        }
         return "Event does not exist";
     }
 

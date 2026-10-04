@@ -1,8 +1,8 @@
 type: http_request
 model: http_request
-id: rq_uikjWPFwFw
-createdAt: 2026-10-04T09:58:00.857663800
-updatedAt: 2026-10-04T10:54:37.079673200
+id: rq_KTBC8j4vpr
+createdAt: 2026-10-04T10:54:18.326077300
+updatedAt: 2026-10-04T10:55:03.674346
 workspaceId: wk_BAjMfDGzCZ
 folderId: fl_a9oQpRcDao
 authentication: {}
@@ -11,9 +11,9 @@ body: {}
 bodyType: null
 description: ''
 headers: []
-method: DELETE
-name: Soft delete an event
-sortPriority: 333.3333333333333
+method: PUT
+name: Restore an event
+sortPriority: 333.3343333333333
 url: http://localhost:8080/event/8
 urlParameters: []
 settingSendCookies:
