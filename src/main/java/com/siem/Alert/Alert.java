@@ -15,7 +15,7 @@ public class Alert {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int AlertID;
 
-    private String eventType;
+    private String alertType;
     private String severity;
     private String notes;
     private String ipAddress;
@@ -27,8 +27,8 @@ public class Alert {
         timestamp = LocalDateTime.now();
     }
 
-    public Alert(String eventType, String severity, String notes, String ipAddress, boolean resolved) {
-        this.eventType = eventType;
+    public Alert(String alertType, String severity, String notes, String ipAddress, boolean resolved) {
+        this.alertType = alertType;
         this.severity = severity;
         this.notes = notes;
         this.ipAddress = ipAddress;

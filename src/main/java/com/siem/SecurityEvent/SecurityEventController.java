@@ -3,6 +3,9 @@ import com.siem.Alert.*;
 
 import org.springframework.web.bind.annotation.*;
 import jakarta.servlet.http.HttpServletRequest;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.List;
 
 @RestController
@@ -10,11 +13,13 @@ public class SecurityEventController {
 
     private final SecurityEventRepository securityEventRepository;
     private final DetectionSystem detectionSystem;
+    private final GeoLocationData geoLocationData;
 
 
-    public SecurityEventController(SecurityEventRepository securityEventRepository, DetectionSystem detectionSystem) {
+    public SecurityEventController(SecurityEventRepository securityEventRepository, DetectionSystem detectionSystem, GeoLocationData geoLocationData) {
         this.securityEventRepository = securityEventRepository;
         this.detectionSystem = detectionSystem;
+        this.geoLocationData = geoLocationData;
     }
 
     public SecurityEvent event(int id) {
@@ -27,10 +32,11 @@ public class SecurityEventController {
     }
 
     @PostMapping("/event")
-    public void createEvent(@RequestBody SecurityEvent securityEvent, HttpServletRequest ip) {
+    public void createEvent(@RequestBody SecurityEvent securityEvent, HttpServletRequest ip) throws Exception {
         securityEvent.setIpAddress(ip.getRemoteAddr());
+        securityEvent.setCountry(geoLocationData.findCountry(ip.getRemoteAddr()));
         securityEventRepository.save(securityEvent);
-        detectionSystem.bruteForceAttack(securityEvent);
+        detectionSystem.attackDetector(securityEvent);
     }
 
     @DeleteMapping("/event/{eventID}")

@@ -14,4 +14,10 @@ public interface SecurityEventRepository extends JpaRepository<SecurityEvent, In
             LocalDateTime start, LocalDateTime end
     );
 
+    List<SecurityEvent> findByCountryAndIpAddressAndTimestampBetween(
+            String Country,
+            String ipAddress,
+            LocalDateTime start, LocalDateTime end
+    );
+
 }

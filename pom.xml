@@ -29,6 +29,13 @@
 
   <dependencies>
 
+    <!-- Geolocation database dependencies -->
+    <dependency>
+      <groupId>com.maxmind.db</groupId>
+      <artifactId>maxmind-db</artifactId>
+      <version>4.2.0</version>
+    </dependency>
+
     <!-- MariaDB database dependencies -->
     <dependency>
       <groupId>org.mariadb.jdbc</groupId>

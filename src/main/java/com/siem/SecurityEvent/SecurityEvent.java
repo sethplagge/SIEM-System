@@ -1,5 +1,6 @@
 package com.siem.SecurityEvent;
 
+import java.net.InetAddress;
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
 import lombok.*;
@@ -19,6 +20,7 @@ public class SecurityEvent {
     private String ipAddress;
     private String message;
     private LocalDateTime timestamp;
+    private String country;
     private boolean deleted;
 
     @PrePersist

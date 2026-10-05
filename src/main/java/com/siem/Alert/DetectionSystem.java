@@ -16,18 +16,17 @@ public class DetectionSystem {
         this.alertRepository = alertRepository;
     }
 
-    public void bruteForceAttack(SecurityEvent event) {
+    public void attackDetector(SecurityEvent event) {
 
-        LocalDateTime end = LocalDateTime.now();
-        LocalDateTime start = end.minusMinutes(5);
+        LocalDateTime bruteForceEnd = LocalDateTime.now();
+        LocalDateTime bruteForceStart = bruteForceEnd.minusMinutes(5);
+        List<SecurityEvent> bruteForceEvent = securityEventRepository.findByEventTypeAndIpAddressAndTimestampBetween("LOGIN-FAILED", event.getIpAddress(), bruteForceStart, bruteForceEnd);
 
-        List<SecurityEvent> bruteForceEvents = securityEventRepository.findByEventTypeAndIpAddressAndTimestampBetween("LOGIN-FAILED", event.getIpAddress(), start, end);
-
-        if (bruteForceEvents.size() >= 3) {
+        if (bruteForceEvent.size() >= 3 && alertRepository.findByAlertTypeAndIpAddressAndResolved("Brute force attempt", event.getIpAddress(), false).isEmpty()) {
             Alert bruteForce = new Alert(
                     "Brute force attempt",
-                    "medium",
-                    "",
+                    "small",
+                    "3 failed login attempts",
                     event.getIpAddress(),
                     false
             );
